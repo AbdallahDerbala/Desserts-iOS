@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct FavoriteDessertsView: View {
+    @EnvironmentObject var vm: HomeViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            // Search Bar
+            SearchBarView(searchResults: $vm.searchText)
+            
+            Spacer(minLength: 0)
+            
+            // List of Desserts
+            List {
+                ForEach(vm.allMeals ?? [], id: \.id) { (dessert: Dessert) in
+                    if dessert.isFavorite() {
+                        DessertRowView(id: dessert.id)
+                            .background(NavigationLink("", destination: DessertDetailsView(id: dessert.id)).opacity(0))
+                    }
+                }
+            }
+            
+            Spacer(minLength: 0)
+            
+        }
+        .navigationTitle("Favorites")
     }
 }
 
 struct FavoriteDessertsView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteDessertsView()
+        NavigationView {
+            FavoriteDessertsView()
+        }
+        .environmentObject(dev.desserts)
     }
 }
