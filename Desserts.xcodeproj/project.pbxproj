@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E3EE5EB92A164F45006631F1 /* DessertsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE5EB82A164F45006631F1 /* DessertsApp.swift */; };
-		E3EE5EBB2A164F45006631F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE5EBA2A164F45006631F1 /* ContentView.swift */; };
+		E3EE5EBB2A164F45006631F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE5EBA2A164F45006631F1 /* HomeView.swift */; };
 		E3EE5EBD2A164F46006631F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3EE5EBC2A164F46006631F1 /* Assets.xcassets */; };
 		E3EE5EC02A164F46006631F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3EE5EBF2A164F46006631F1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		E3EE5EB52A164F45006631F1 /* Desserts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desserts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3EE5EB82A164F45006631F1 /* DessertsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsApp.swift; sourceTree = "<group>"; };
-		E3EE5EBA2A164F45006631F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E3EE5EBA2A164F45006631F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E3EE5EBC2A164F46006631F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3EE5EBF2A164F46006631F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,11 @@
 			isa = PBXGroup;
 			children = (
 				E3EE5EB82A164F45006631F1 /* DessertsApp.swift */,
-				E3EE5EBA2A164F45006631F1 /* ContentView.swift */,
+				E3EE5EC62A164FAC006631F1 /* Extensions */,
+				E3EE5EC72A164FBC006631F1 /* Models */,
+				E3EE5EC82A164FC2006631F1 /* ViewModels */,
+				E3EE5EC92A164FCB006631F1 /* Views */,
+				E3EE5EBA2A164F45006631F1 /* HomeView.swift */,
 				E3EE5EBC2A164F46006631F1 /* Assets.xcassets */,
 				E3EE5EBE2A164F46006631F1 /* Preview Content */,
 			);
@@ -65,6 +69,34 @@
 				E3EE5EBF2A164F46006631F1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E3EE5EC62A164FAC006631F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E3EE5EC72A164FBC006631F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E3EE5EC82A164FC2006631F1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E3EE5EC92A164FCB006631F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3EE5EBB2A164F45006631F1 /* ContentView.swift in Sources */,
+				E3EE5EBB2A164F45006631F1 /* HomeView.swift in Sources */,
 				E3EE5EB92A164F45006631F1 /* DessertsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
