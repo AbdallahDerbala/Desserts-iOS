@@ -45,9 +45,6 @@ struct DessertDetailsView: View {
                     }
                 }
                 
-                
-                
-                
                 if let ingredients = mealGenerator.currentMeal?.ingredients {
                     HStack {
                         Text("Ingredients")
@@ -72,8 +69,13 @@ struct DessertDetailsView: View {
                     Text(instructions)
                 }
             }
-            .padding()
+            .padding(.leading, 10)
+            .padding(.trailing, 10)
+            .padding(.bottom, 10)
         }
+        .background(
+            Color("MainTheme")
+        )
     }
 }
 

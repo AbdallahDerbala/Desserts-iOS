@@ -22,17 +22,22 @@ struct RecentDessertsView: View {
                 ForEach(vm.allMeals ?? [], id: \.id) { (dessert: Dessert) in
                     if dessert.isrecent() {
                         DessertRowView(id: dessert.id)
-                            .background(NavigationLink("", destination: DessertDetailsView(id: dessert.id)).opacity(0))
+                            .foregroundColor(Color("SecondaryTheme"))
+                            .listRowBackground(Color("MainTheme"))
                     }
                 }
                 .onDelete (perform: deleteItems)
+                .foregroundColor(Color.black)
             }
+            .listStyle(PlainListStyle())
             
             Spacer(minLength: 0)
             
         }
         .navigationTitle("Recents")
         .navigationBarItems(trailing: EditButton())
+        .background(Color("MainTheme"))
+        .foregroundColor(Color("SecondaryTheme"))
     }
     
     func deleteItems(at offsets: IndexSet) {

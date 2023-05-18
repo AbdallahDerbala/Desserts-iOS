@@ -22,15 +22,20 @@ struct FavoriteDessertsView: View {
                 ForEach(vm.allMeals ?? [], id: \.id) { (dessert: Dessert) in
                     if dessert.isFavorite() {
                         DessertRowView(id: dessert.id)
-                            .background(NavigationLink("", destination: DessertDetailsView(id: dessert.id)).opacity(0))
+                            .foregroundColor(Color("SecondaryTheme"))
+                            .listRowBackground(Color("MainTheme"))
                     }
                 }
+                .foregroundColor(Color.black)
             }
+            .listStyle(PlainListStyle())
             
             Spacer(minLength: 0)
             
         }
         .navigationTitle("Favorites")
+        .background(Color("MainTheme"))
+        .foregroundColor(Color("SecondaryTheme"))
     }
 }
 

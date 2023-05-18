@@ -24,7 +24,6 @@ struct DessertRowView: View {
             
             Text(mealGenerator.currentMeal?.name ?? "")
                 .font(.title)
-                .fontWeight(.light)
             Spacer(minLength: 0)
         }
         .background(
