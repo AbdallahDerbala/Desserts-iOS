@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct DessertsApp: App {
+    @StateObject var vm = HomeViewModel()
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            NavigationView {
+                HomeView()
+            }
+            .environmentObject(vm)
         }
     }
 }
