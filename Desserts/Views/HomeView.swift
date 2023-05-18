@@ -8,19 +8,34 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var vm: HomeViewModel
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            // Search Bar
+            SearchBarView(searchResults: $vm.searchText)
+            
+            Spacer(minLength: 0)
+            
+            // List of Desserts
+            List {
+                ForEach(vm.allMeals ?? [], id: \.id) { (dessert: Dessert) in
+                    DessertRowView(id: dessert.id)
+                }
+            }
+            Spacer(minLength: 0)
         }
-        .padding()
+        .navigationTitle("Dessert Recipes 🍰")
+        .navigationBarItems(
+            leading: NavigationLink("Recents", destination: RecentDessertsView()),
+            trailing: NavigationLink("Favorites", destination: FavoriteDessertsView()))
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        NavigationView {
+            HomeView()
+        }
+        .environmentObject(dev.desserts)
     }
 }
